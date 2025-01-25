@@ -1,11 +1,7 @@
-import {Body, Controller, Post} from '@nestjs/common';
+import { Body, Controller, Post } from '@nestjs/common';
 import * as EmailValidator from 'email-validator';
-import {IsEmail, IsNotEmpty, validate} from "class-validator";
 
-
-const validator = require("email-validator");
-var WAValidator = require('multicoin-address-validator');
-
+const WAValidator = require('multicoin-address-validator');
 
 
 @Controller('validator')
