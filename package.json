@@ -29,6 +29,7 @@
     "class-validator": "^0.14.1",
     "email-validator": "^2.0.4",
     "express-rate-limit": "^7.5.0",
+    "multicoin-address-validator": "^0.5.24",
     "reflect-metadata": "^0.2.0",
     "rxjs": "^7.8.1"
   },
