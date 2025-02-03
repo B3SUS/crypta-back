@@ -1,6 +1,6 @@
 import { Body, Controller, Post } from '@nestjs/common';
 import * as EmailValidator from 'email-validator';
-const WAValidator = require('multicoin-address-validator');
+const WAValidator = require("@capitual/api-crypto-address-validator");
 
 @Controller('validator')
 export class ValidatorController {
