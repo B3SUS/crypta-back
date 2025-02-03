@@ -1,12 +1,16 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { rateLimit } from 'express-rate-limit'
+import * as express from 'express';
 
 const limiter = rateLimit({
   windowMs: 60 * 1000,
   max: 10,
   message: "Слишком много запросов с этого IP, попробуйте снова позже.",
 });
+
+
+const server = express();
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -22,3 +26,5 @@ async function bootstrap() {
   await app.listen(3000);
 }
 bootstrap();
+
+export default server;
