@@ -14,7 +14,7 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   app.enableCors({
-    origin: ['http://crypta.space', 'http://localhost:3000', 'http://localhost', 'http://postman'],
+    origin: ['https://crypta.space', 'http://localhost:3000', 'http://localhost', 'http://postman'],
     methods: 'GET,POST',
     credentials: true,
   });
