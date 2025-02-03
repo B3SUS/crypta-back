@@ -19,6 +19,6 @@ async function bootstrap() {
 
   app.use(limiter)
 
-  await app.listen(3001);
+  await app.listen(3000);
 }
 bootstrap();
