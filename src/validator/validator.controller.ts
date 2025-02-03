@@ -14,19 +14,6 @@ export class ValidatorController {
       @Body('address') address: string,
       @Body('coin') coin: string,
     ) {
-        if (!address || typeof address !== 'string' || address.trim() === '') {
-            throw new Error('Invalid address');
-        }
-
-        if (!coin || typeof coin !== 'string' || coin.trim() === '') {
-            throw new Error('Invalid coin type');
-        }
-
-        try {
-            return WAValidator.validate(address, coin);
-        } catch (error) {
-            console.error('Error during address validation:', error);
-            throw new Error('Address validation failed');
-        }
+        return WAValidator.validate(address, coin);
     }
 }
