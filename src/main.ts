@@ -10,8 +10,6 @@ const limiter = rateLimit({
 });
 
 
-const server = express();
-
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
@@ -26,5 +24,3 @@ async function bootstrap() {
   await app.listen(3000);
 }
 bootstrap();
-
-export default server;
